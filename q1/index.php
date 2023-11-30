@@ -42,7 +42,7 @@
                     <tr>
                         <td><img src="./img/<?= $row['img']; ?>" style="width:300px;height:30px"></td>
                         <td><input type="text" name="text[<?= $row['id']; ?>]" id="" value="<?= $row['text']; ?>" style="width:90%"></td>
-                        <td><input type="radio" name="display" id="" value="<?= $row['id']; ?>" <?= ($row['sh'] == 1) ? 'checked' : ''; ?>></td>></td>
+                        <td><input type="radio" name="display" id="" value="<?= $row['id']; ?>" <?= ($row['display'] == 1) ? 'checked' : ''; ?>></td>></td>
                         <td><input type="checkbox" name="del[<?= $row['id']; ?>]" id=""></td>
                         <td><input class="btn btn-primary" type="button" value="更新圖片" name="" id=""></td>
                         <!-- 表單內用button預設的效果為submit 所以用input較好 -->
