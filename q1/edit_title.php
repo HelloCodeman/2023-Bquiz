@@ -1,28 +1,15 @@
 <?php
 include_once "db.php";
-dd($_POST);
+//dd($_POST);
 foreach ($_POST['id'] as $key => $id) {
-    $row = $Title->find($id);
-    // dd($row);
-    $row['text'] = $_POST['text'][$key];
-    // dd($row);
-    $Title->save($row);
+    if (isset($_POST['del']) && in_array($id, $_POST['del'])) {
+        $Title->del($id);
+    } else {
+        $row = $Title->find($id);
+        $row['text'] = $_POST['text'][$key];
+        $row['display'] = ($id == $_POST['display']) ? 1 : 0;
+        $Title->save($row);
+    }
 }
 
-foreach ($_POST['id'] as $id) {
-    $row = $Title->find($id);
-    /* if($id==$_POST['display']){
-        $row['display']=1;
-    }else{
-        $row['display']=0;
-    } */
-    $row['display'] = ($id == $_POST['display']) ? 1 : 0;
-    $Title->save($row);
-}
-/* 
-$_POST['display']=0;
-$Title->save($_POST);
 header("location:index.php");
- */
-
- ?>
