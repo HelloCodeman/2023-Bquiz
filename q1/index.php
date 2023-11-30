@@ -1,4 +1,4 @@
-<?php include_once "db.php";?>
+<?php include_once "db.php"; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -36,17 +36,18 @@
                     <td></td>
                 </tr>
                 <?php
-$rows=$Title->all();
-foreach($rows as $row){
+                $rows = $Title->all();
+                foreach ($rows as $row) {
                 ?>
-                <tr>
-                    <td><img src="./img/<?=$row['img'];?>" style="width:300px;height:30px"></td>
-                    <td><input type="text" name="" id="" value="<?=$row['text'];?>" style="width:90%"></td>
-                    <td><input type="radio" name="" id=""></td>
-                    <td><input type="checkbox" name="" id=""></td>
-                    <td><input class="btn btn-primary" type="button" value="更新圖片" name="" id=""></td>
-                    <!-- 表單內用button預設的效果為submit 所以用input較好 -->
-                </tr>
+                    <tr>
+                        <td><img src="./img/<?= $row['img']; ?>" style="width:300px;height:30px"></td>
+                        <td><input type="text" name="text[]" id="" value="<?= $row['text']; ?>" style="width:90%"></td>
+                        <td><input type="radio" name="sh" id=""></td>
+                        <td><input type="checkbox" name="del[]" id="" value="<?= $row['id']; ?>"></td>
+                        <td><input class="btn btn-primary" type="button" value="更新圖片" name="" id=""></td>
+                        <!-- 表單內用button預設的效果為submit 所以用input較好 -->
+                        <input type="hidden" name="id[]" value="<?= $row['id']; ?>">
+                    </tr>
                 <?php
                 }
                 ?>
