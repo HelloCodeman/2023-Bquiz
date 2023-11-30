@@ -12,6 +12,8 @@
         </tr>
     </table>
 
-    <div class="text-center"><input type="submit" value="新增"><input type="reset" value="重置"></div>
+    <div class="text-center">
+        <input type="submit" value="新增">
+        <input type="reset" value="重置">
     </div>
 </form>
