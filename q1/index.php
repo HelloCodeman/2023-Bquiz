@@ -24,9 +24,7 @@
     <main class="container">
         <h3 class="text-center">網站標題管理</h3>
         <hr>
-
-        <form action="" method="post">
-
+        <form action="edit_title.php" method="post">
             <table class="table table-bordered text-center">
                 <tr>
                     <td>網站標題</td>
@@ -52,8 +50,12 @@
                 ?>
             </table>
             <div class="d-flex justify-content-between">
-                <div><input type="button" onclick="op('#cover','#cvr','title.php?do=title')" value="新增網站標題圖片"></div> <!-- op=open -->
-                <div><input type="submit" value="修改確定"><input type="reset" value="重置"></div>
+                <div><input type="button" onclick="op('#cover','#cvr','title.php?do=title')" value="新增網站標題圖片"></div>
+                <!-- op=open -->
+                <div>
+                    <input type="submit" value="修改確定">
+                    <input type="reset" value="重置">
+                </div>
                 <div></div>
             </div>
         </form>
