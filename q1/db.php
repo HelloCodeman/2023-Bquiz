@@ -118,6 +118,10 @@ class DB
         return $this->pdo->exec($sql);
     }
 
+    /*
+      可輸入各式SQL語法字串並直接執行
+    */
+
     function q($sql)
     {
         return $this->pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
@@ -129,6 +133,30 @@ class DB
         }
         return $tmp;
     }
+
+    private function sql_all($sql, $array, $other)
+    {
+
+        if (isset($this->table) && !empty($this->table)) {
+
+            if (is_array($array)) {
+
+                if (!empty($array)) {
+                    $tmp = $this->a2s($array);
+                    $sql .= " where " . join(" && ", $tmp);
+                }
+            } else {
+                $sql .= " $array";
+            }
+
+            $sql .= $other;
+            // echo 'all=>'.$sql;
+            // $rows = $this->pdo->query($sql)->fetchColumn();
+            return $sql;
+        } else {
+            echo "錯誤:沒有指定的資料表名稱";
+        }
+    }
 }
 
 function dd($array)
@@ -139,5 +167,3 @@ function dd($array)
 }
 
 $Title = new DB('titles');
-
-?>

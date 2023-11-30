@@ -11,7 +11,7 @@ foreach ($_POST['id'] as $key => $id) {
 
 foreach ($_POST['id'] as $id) {
     $row = $Title->find($id);
-    /* if($id==$_POST['sh']){
+    /* if($id==$_POST['display']){
         $row['display']=1;
     }else{
         $row['display']=0;
