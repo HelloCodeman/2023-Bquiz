@@ -18,6 +18,7 @@
         $subject = $Que->find($_GET['id']);
         ?>
         <h2 class="text-center"><?= $subject['text']; ?></h2>
+        <br>
         <form action="./api/vote.php" method="post">
             <ul class="list-group col-6 mx-auto">
                 <?php
