@@ -21,4 +21,4 @@ foreach ($_POST['opt'] as $opt) {
     $Que->save($data);
 };
 
-header("location:admin.php");
+header("location:../admin.php");
