@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header class="p-5">
+    <header class="p-3">
         <h1 class="text-center">問卷投票</h1>
     </header>
     <main class='container'>

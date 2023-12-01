@@ -32,7 +32,6 @@ include_once "db.php";
                 $ques = $Que->all(['subject_id' => 0]);
                 foreach ($ques as $idx => $que) {
                 ?>
-
                     <tr>
                         <td><?= $idx + 1; ?></td>
                         <td><?= $que['text']; ?></td>
