@@ -18,7 +18,7 @@
         $subject = $Que->find($_GET['id']);
         ?>
         <h2 class="text-center"><?= $subject['text']; ?></h2>
-        <form action="add_vote.php" method="post">
+        <form action="./api/vote.php" method="post">
             <ul class="list-group col-6 mx-auto">
                 <?php
                 $opts = $Que->all(['subject_id' => $_GET['id']]);

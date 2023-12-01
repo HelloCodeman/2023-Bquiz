@@ -1,5 +1,5 @@
 <?php
-include_once "db.php";
+include_once "../db.php";
 
 dd($_POST);
 // 練習測試用
