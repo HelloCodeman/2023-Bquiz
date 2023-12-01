@@ -29,7 +29,7 @@ include_once "db.php";
                     <th>狀態</th>
                 </tr>
                 <?php
-                $ques = $Que->all(['subject_id' => 0]);
+                $ques = $Que->all(['subject_id' => 0, 'display'=>1]);
                 foreach ($ques as $idx => $que) {
                 ?>
                     <tr>
