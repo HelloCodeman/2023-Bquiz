@@ -86,7 +86,6 @@ include_once "db.php";
         let opt = `<div class="p-2">
                         <label for="">選項</label>
                         <input type="text" name="opt[]">
-                        <input type="button" value="更多">
                     </div>`
         $("#option").before(opt)
     }
